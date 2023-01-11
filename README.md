@@ -1,3 +1,16 @@
-Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False
-& {$P = $env:TEMP + '\chromeremotedesktophost.msi'; Invoke-WebRequest 'https://dl.google.com/edgedl/chrome-remote-desktop/chromeremotedesktophost.msi' -OutFile $P; Start-Process $P -Wait; Remove-Item $P}
-& {$P = $env:TEMP + '\chrome_installer.exe'; Invoke-WebRequest 'https://dl.google.com/chrome/install/latest/chrome_installer.exe' -OutFile $P; Start-Process -FilePath $P -Args '/install' -Verb RunAs -Wait; Remove-Item $P}
+# WINRDP
+How to use 
+
+Just Fork this Repository, Go to Actions tab, Select the Windows-CRD workflow. Then select Run Workflow fill the following data in CRD Code and your Pin in the fields. After that, Press Start.
+
+Input the following code in the fields.
+
+Get the Windows (Powershell) command from here:
+
+https://remotedesktop.google.com/headless
+
+Enter you Six digit Pin code to Login
+
+(Any Six digit Pin)
+
+Thats it... After 2-3 min of Initialize, Check your CRD Application or Account.
